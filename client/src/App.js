@@ -13,7 +13,7 @@ function App() {
   const [customerNumber, setCustomerNumber] = useState('');
   const [customerAddress, setCustomerAddress] = useState('');
   const [downloaded, setDownloaded] = useState(false);
-  const [discountTotalRate, setDiscountTotalRate] = useState(0);
+  // const [discountTotalRate, setDiscountTotalRate] = useState(0);
   // const [anotherTable, setAnotherTable] = useState([]);
   // const [anotherTotalRate, setAnotherTotalRate] = useState(0);
 
@@ -39,8 +39,8 @@ function App() {
           setCustomerNumber={setCustomerNumber}
           customerAddress={customerAddress}
           setCustomerAddress={setCustomerAddress}
-          setDiscountTotalRate={setDiscountTotalRate}
-          discountTotalRate={discountTotalRate}
+          // setDiscountTotalRate={setDiscountTotalRate}
+          // discountTotalRate={discountTotalRate}
           // giftBoxCrackers={giftBoxCrackers}
           // setGiftBoxCrackers={setGiftBoxCrackers}
           // setAnotherTable={setAnotherTable}
@@ -63,8 +63,8 @@ function App() {
           setCustomerAddress={setCustomerAddress}
           setDownloaded={setDownloaded}
           downloaded={downloaded}
-          setDiscountTotalRate={setDiscountTotalRate}
-          discountTotalRate={discountTotalRate}
+          // setDiscountTotalRate={setDiscountTotalRate}
+          // discountTotalRate={discountTotalRate}
           // giftBoxCrackers={giftBoxCrackers}
           // setGiftBoxCrackers={setGiftBoxCrackers}
           // setAnotherTable={setAnotherTable}

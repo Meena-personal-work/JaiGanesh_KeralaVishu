@@ -15,7 +15,7 @@ Font.register({
   ]
 });
 
-const ConfirmListPage = ({ setSelectedItems, selectedItems, totalRate, setTotalRate, crackers, setCrackers, customerName, setCustomerName, customerNumber, setCustomerNumber, customerAddress, setCustomerAddress, setDownloaded, downloaded, setDiscountTotalRate, discountTotalRate}) => {
+const ConfirmListPage = ({ setSelectedItems, selectedItems, totalRate, setTotalRate, crackers, setCrackers, customerName, setCustomerName, customerNumber, setCustomerNumber, customerAddress, setCustomerAddress, setDownloaded, downloaded}) => {
   const [selectedItemsPdf, setSelectedItemsPdf] = useState([]);
   // const [GiftBoxPdf, setGiftBoxPdf] = useState([]);
 
@@ -87,7 +87,7 @@ const ConfirmListPage = ({ setSelectedItems, selectedItems, totalRate, setTotalR
     setCustomerName('');
     setCustomerNumber('');
     setCustomerAddress('');
-    setDiscountTotalRate(0);
+    // setDiscountTotalRate(0);
     setCrackers([]);
     setSelectedItems([]);
     setTotalRate(0);
@@ -181,8 +181,8 @@ const ConfirmListPage = ({ setSelectedItems, selectedItems, totalRate, setTotalR
               <td className='tablecell' style={{ fontWeight: 'bold', backgroundColor: '#f1eeee' }}>₹{totalRate}</td>
             </tr>
             <tr>
-              <td colSpan="3" style={{ fontWeight: 'bold', backgroundColor: '#f1eeee' }}>Total Amount with 50% Discount</td>
-              <td className='tablecell' style={{ fontWeight: 'bold', backgroundColor: '#f1eeee' }}>₹{discountTotalRate}</td>
+              {/* <td colSpan="3" style={{ fontWeight: 'bold', backgroundColor: '#f1eeee' }}>Total Amount with 50% Discount</td>
+              <td className='tablecell' style={{ fontWeight: 'bold', backgroundColor: '#f1eeee' }}>₹{discountTotalRate}</td> */}
             </tr>
           </tbody>
         </table>}
@@ -269,8 +269,7 @@ const ConfirmListPage = ({ setSelectedItems, selectedItems, totalRate, setTotalR
   ))}
   
   {/* Total amount and total amount with discount */}
-  {selectedItems.length > 0 && <><Text style={{ fontSize: 14, fontWeight: 'bold', marginTop: 17 }}>Total Amount: {totalRate.toFixed(2)}</Text>
-  <Text style={{ fontSize: 14, fontWeight: 'bold', marginTop: 6 }}>Total Amount with 50% Discount: {discountTotalRate.toFixed(2)}</Text></>}
+  {selectedItems.length > 0 && <><Text style={{ fontSize: 14, fontWeight: 'bold', marginTop: 17 }}>Total Amount: {totalRate.toFixed(2)}</Text></>}
 </View>
 {/* <View>
   
@@ -310,7 +309,7 @@ const ConfirmListPage = ({ setSelectedItems, selectedItems, totalRate, setTotalR
                 <Text style={{ fontSize: 14, marginTop: 10, fontWeight: 'bold', wordBreak: 'break-word', width: '75%' }}>Customer Name : {customerName}</Text>
                 <Text style={{ fontSize: 14, fontWeight: 'bold', marginTop: 6 }}>Customer Number : {customerNumber}</Text>
                 <Text style={{ fontSize: 14, fontWeight: 'bold', wordBreak: 'break-word', width: '75%', marginTop: 6 }}>Customer Address : {customerAddress}</Text>
-                <Text style={{ fontSize: 14, fontWeight: 'bold', wordBreak: 'break-word', width: '75%', marginTop: 15 }}>Overall Total Amount : {discountTotalRate}</Text>
+                <Text style={{ fontSize: 14, fontWeight: 'bold', wordBreak: 'break-word', width: '75%', marginTop: 15 }}>Overall Total Amount : {totalRate}</Text>
               </Page>
             </Document>
           }

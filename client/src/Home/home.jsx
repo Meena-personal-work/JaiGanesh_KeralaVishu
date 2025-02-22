@@ -2,11 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLocation, faPhone } from '@fortawesome/free-solid-svg-icons';
-import image from './discount.png';
+// import image from './discount.png';
 
 import './home.css';
 
-const Home = ({ setSelectedItems, selectedItems, totalRate, setTotalRate, crackers, setCrackers, customerName, setCustomerName, customerNumber, setCustomerNumber, customerAddress, setCustomerAddress, setDiscountTotalRate, discountTotalRate}) => {
+const Home = ({ setSelectedItems, selectedItems, totalRate, setTotalRate, crackers, setCrackers, customerName, setCustomerName, customerNumber, setCustomerNumber, customerAddress, setCustomerAddress}) => {
   const navigate = useNavigate();
 
   // Function to handle quantity change
@@ -38,12 +38,12 @@ const Home = ({ setSelectedItems, selectedItems, totalRate, setTotalRate, cracke
       });
     });
 
-    // Apply 50% discount
-    const discount = total * 0.5;
-    const discountedTotal = total - discount;
+    // // Apply 50% discount
+    // const discount = total * 0.5;
+    // const discountedTotal = total - discount;
 
     setTotalRate(total);
-    setDiscountTotalRate(discountedTotal);
+    // setDiscountTotalRate(discountedTotal);
 
   };
 
@@ -240,7 +240,7 @@ const Home = ({ setSelectedItems, selectedItems, totalRate, setTotalRate, cracke
 
       <div className='content-container'>
         <div className='sub-heading'>
-          <h4 className='font-style-sub-heading'>Explore Our Product Catalogue and Place Your Order Today!<span className='discount-text'>(50% Discount)</span><img src={image} alt='loading...' className='font-style-sub-heading-discount'></img></h4>
+          <h4 className='font-style-sub-heading'>Explore Our Product Catalogue and Place Your Order Today!</h4>
           {/* <div className='font-style-sub-heading-discount'></div> */}
         </div>
         <div className='sub-container'>
@@ -338,8 +338,8 @@ const Home = ({ setSelectedItems, selectedItems, totalRate, setTotalRate, cracke
                   <td className='tablecell' style={{ fontWeight: 'bold', backgroundColor: '#f1eeee' }}>₹{totalRate}</td>
                 </tr>
                 <tr>
-                  <td colSpan="3" style={{ fontWeight: 'bold', backgroundColor: '#f1eeee' }}>Total Amount with 50% Discount</td>
-                  <td className='tablecell' style={{ fontWeight: 'bold', backgroundColor: '#f1eeee' }}>₹{discountTotalRate}</td>
+                  {/* <td colSpan="3" style={{ fontWeight: 'bold', backgroundColor: '#f1eeee' }}>Total Amount with 50% Discount</td>
+                  <td className='tablecell' style={{ fontWeight: 'bold', backgroundColor: '#f1eeee' }}>₹{discountTotalRate}</td> */}
                 </tr>
               </tbody>
             </table>
